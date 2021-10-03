@@ -16,10 +16,10 @@ use Illuminate\Database\Eloquent\Concerns\HidesAttributes;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Database\Eloquent\Model;
 
-class Layout implements LayoutInterface, JsonSerializable, ArrayAccess, Arrayable
+class Layout implements LayoutInterface, JsonSerializable, ArrayAccess
 {
-    use HasAttributes;
-    use HidesAttributes;
+//    use HasAttributes;
+//    use HidesAttributes;
     use HasFlexible;
 
     /**
@@ -105,10 +105,10 @@ class Layout implements LayoutInterface, JsonSerializable, ArrayAccess, Arrayabl
     {
         $this->title = $title ?? $this->title();
         $this->name = $name ?? $this->name();
-        $this->fields = new FieldCollection($fields ?? $this->fields());
+//        $this->fields = new FieldCollection($fields ?? $this->fields());
         $this->key = is_null($key) ? null : $this->getProcessedKey($key);
         $this->removeCallbackMethod = $removeCallbackMethod;
-        $this->setRawAttributes($this->cleanAttributes($attributes));
+//        $this->setRawAttributes($this->cleanAttributes($attributes));
     }
 
     /**
