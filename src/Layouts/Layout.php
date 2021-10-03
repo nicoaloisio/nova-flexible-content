@@ -4,9 +4,9 @@ namespace Whitecube\NovaFlexibleContent\Layouts;
 
 use ArrayAccess;
 use JsonSerializable;
-use Laravel\Nova\Fields\Field;
-use Laravel\Nova\Fields\FieldCollection;
-use Laravel\Nova\Http\Requests\NovaRequest;
+//use Laravel\Nova\Fields\Field;
+//use Laravel\Nova\Fields\FieldCollection;
+//use Laravel\Nova\Http\Requests\NovaRequest;
 use Whitecube\NovaFlexibleContent\Flexible;
 use Whitecube\NovaFlexibleContent\Http\ScopedRequest;
 use Whitecube\NovaFlexibleContent\Http\FlexibleAttribute;
@@ -18,8 +18,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Layout implements LayoutInterface, JsonSerializable, ArrayAccess
 {
-//    use HasAttributes;
-//    use HidesAttributes;
+    use HasAttributes;
+    use HidesAttributes;
     use HasFlexible;
 
     /**
